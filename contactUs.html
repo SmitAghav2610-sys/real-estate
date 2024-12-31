@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dream-Homes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+*{
+    font-family: Montserrat;
+}
+        body {
+            
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .logo{
+    filter: drop-shadow(5px 5px 5px orange);
+}
+        /* navbar */
+.navbar {
+    background-color:black;
+    padding: 10px 30px;
+    font-size: 16px;
+    height:50px;
+}
+
+.navbar ul {
+margin-top: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.navbar ul li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #3498db; 
+}
+
+.navbar li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:black;
+    padding: 10px 0;
+    width: 200px;
+    list-style-type: none;
+}
+
+.navbar li:hover > ul {
+    display: block;
+}
+
+.navbar li ul li a {
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.navbar li ul li a:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.buy-sublinks, .sell-sublinks, .rent-sublinks {
+    background-color: #34495e;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul li {
+        margin-bottom: 10px;
+    }
+
+    .navbar li ul {
+        position: static;
+        width: 100%;
+    }
+}
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 36px;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 50px;
+        }
+
+        .contact-section {
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-form-container {
+            flex: 1;
+            max-width: 48%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .contact-details-container {
+            flex: 1;
+            max-width: 48%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 90%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-left: 40%;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        .contact-details-container h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .details-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            font-size: 16px;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .contact-item p {
+            margin: 0;
+            margin-left: 10px;
+        }
+
+        .contact-note {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-form-container,
+            .contact-details-container {
+                max-width: 100%;
+            }
+        }
+        /* Footer Styling */
+footer {
+    background-color: #333;
+    color: #f9f9f9;
+    padding: 10px 10px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+.footer-about h3{
+    margin-left:15px;
+}
+.footer-about p{
+    margin-right: 10px;
+    text-align: start;
+}
+.footer-links a{
+    margin-left: 20px;
+}
+
+.footer-about, .footer-links, .footer-contact, .footer-social {
+    flex: 1;
+    min-width: 250px;
+    margin-right: 20px;
+}
+
+.footer-about h3, .footer-links h3, .footer-contact h3, .footer-social h3 {
+    font-size: 1.5rem;
+    /* margin-bottom: 10px; */
+}
+.footer-contact p,h3{
+    text-align: start;
+    margin-bottom: 10px;
+}
+.footer-about p{
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ff9f00;
+}
+
+.footer-social {
+    gap: 15px;
+    align-items: center;
+}
+
+.social-icons a {
+    font-size: 20px;
+    padding: 0.2rem;
+    color: #f9f9f9;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff9f00;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+}
+.footer-bottom a{
+color: blue;
+list-style-type: none;
+text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-about, .footer-links, .footer-contact, .footer-social {
+        margin-bottom: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li class="logo"><a href="index.html">Dream-Homes</a></li>
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="properties.html">Buy</a></li>
+
+            <li><a href="sale.html">Sell</a></li>
+
+            <li><a href="rent.html">Rent</a></li>
+
+            <li><a href="contactUs.html">Contact Us</a></li>
+
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+
+        </ul>
+    </div>
+<section class="contact-section">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Whether you're looking to buy, sell, or rent, our team is here to help you every step of the way. Feel free to reach out using the form below or via our contact details.</p>
+
+    <div class="contact-container">
+        <!-- Left: Contact Form -->
+        <div class="contact-form-container">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Right: Contact Details -->
+        <div class="contact-details-container">
+            <h2>Our Contact Information</h2>
+            <p>If you have any questions or need assistance, feel free to reach out to us directly. Our team is always here to help you with your property needs.</p>
+            <div class="details-container">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p> 123 Dream Street, Pune, Maharshtra, India </p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p> +123 456 7890</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>contact@dream-homes.com</p>
+                </div>
+            </div>
+            <div class="contact-note">
+                <p><strong>Our office is open from Monday to Friday, 9 AM to 6 PM. If you're unable to reach us during these hours, please leave a message, and we'll get back to you as soon as possible.</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+            <h3>About Dream-Homes</h3>
+            <p>At Dream-Homes, we help people find their perfect place to live. With years of experience, we pride ourselves on delivering quality homes and exceptional service.</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="properties.html">Buy a Home</a></li>
+                <li><a href="sale.html">Sell a Home</a></li>
+                <li><a href="rent.html">Rent a Home</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href="index.html#privacy">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: contact@dream-homes.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 Dream Street, Pune, Maharashtra</p>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Dream-Homes. All Rights Reserved.| Powered By: <a href="https://www.cybromatechtechnology.in/">Cybromatech Technology Pvt Ltd, Pune</a></p>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+
+<script>
+    // JavaScript to submit form via AJAX
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();  // Prevents default form submission
+
+        // Collect form data
+        const formData = new FormData(form);
+
+        // Simulate a successful form submission (you can add more functionality here)
+        setTimeout(() => {
+            // Show an alert that the form has been submitted
+            alert("Your message has been sent successfully!");
+
+            // Optionally, reset the form after submission
+            form.preventDefault();
+        }, 1000);  // Simulating a slight delay
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream-Homes</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li class="logo"><a href="index.html">Dream-Homes</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#feature-prop">Featured Properties</a></li>
+            <li><a href="#find-agent">Agents</a></li>
+            
+            <li><a href="#about">About Us</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+
+        </ul>
+    </div>
+
+    <div class="start">
+        <div class="slider">
+          <!-- Slider images -->
+          <div class="slide">
+            <img src="image/img2.jpg" alt="Property 1">
+          </div>
+          <div class="slide">
+            <img src="image/img3.jpg" alt="Property 2">
+          </div>
+          <div class="slide">
+            <img src="image/img4.jpg" alt="Property 3">
+          </div>
+          <div class="slide">
+            <img src="image/img5.jpg" alt="Property 3">
+          </div>
+          <div class="slide">
+            <img src="image/img6 (2).jpg" alt="Property 3">
+          </div>
+        </div>
+        <!-- <div class="text-overlay">
+          <h1>Find Your Dream Home with Dream-Homes</h1>
+          <p>Explore the best properties for sale, rent, and investment in your city.</p>
+        </div> -->
+      </div>
+      
+
+    <section class="featured-properties" id="feature-prop">
+        <h1>Featured Properties</h1>
+        <p>Discover our exclusive selection of premium properties, each offering exceptional value, luxury, and style. Whether you're looking for a family home, an investment property, or your dream house, our featured listings represent the best in real estate.</p>
+    
+        <!-- Slider Container -->
+        <div class="slider-container">
+            <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    
+            <div class="property-cards">
+                <!-- Property 1 -->
+                <div class="property">
+                    <img src="image/home1.jpg" alt="Home 1">
+                    <h3>Luxurious Family Home | Kondhwa, Pune</h3>
+                    <p><strong>Price:</strong> 25 Lakhs</p>
+                    <p><strong>Bedrooms:</strong> 4 | <strong>Bathrooms:</strong> 3 | <strong>Size:</strong> 2,800 sqft</p>
+                    <!-- Link to property details page with query parameters -->
+                    <button class="feature-btn">
+                        <a href="property-details.html?image=image/home1.jpg&title=Luxurious%20Family%20Home%20|%20Kondhwa,%20Pune&price=25%20Lakhs&bedrooms=4&bathrooms=3&size=2800&description=Beautiful%20luxurious%20home%20in%20Kondhwa%20with%20ample%20space">View Details</a>
+                    </button>
+                </div>
+    
+                <!-- Property 2 -->
+                <div class="property">
+                    <img src="image/h2.jpg" alt="Home 2">
+                    <h3>Modern Apartment | Viman Nagar, Pune</h3>
+                    <p><strong>Price:</strong> 35 Lakhs</p>
+                    <p><strong>Bedrooms:</strong> 3 | <strong>Bathrooms:</strong> 2 | <strong>Size:</strong> 1,500 sqft</p>
+                    <!-- Link to property details page with query parameters -->
+                    <button class="feature-btn">
+                        <a href="property-details.html?image=image/h2.jpg&title=Modern%20City%20Apartment%20|%20Viman%20Nagar,%20Pune&price=35%20Lakhs&bedrooms=3&bathrooms=2&size=1500&description=Contemporary%20apartment%20with%20breathtaking%20views%20and%20modern%20amenities%20in%20Viman%20Nagar.">View Details</a>
+                    </button>
+                </div>
+    
+                <!-- Property 3 -->
+                <div class="property">
+                    <img src="image/h3.jpg" alt="Home 3">
+                    <h3>Exclusive Villa | Baner, Pune</h3>
+                    <p><strong>Price:</strong> 50 Lakhs</p>
+                    <p><strong>Bedrooms:</strong> 5 | <strong>Bathrooms:</strong> 4 | <strong>Size:</strong> 3,500 sqft</p>
+                    <!-- Link to property details page with query parameters -->
+                    <button class="feature-btn">
+                        <a href="property-details.html?image=image/h3.jpg&title=Exclusive%20Villa%20|%20Baner,%20Pune&price=50%20Lakhs&bedrooms=5&bathrooms=4&size=3500&description=Luxurious%20villa%20in%20Baner%20with%20spacious%20living%20areas%20and%20private%20garden.">View Details</a>
+                    </button>
+                </div>
+    
+                <!-- Property 4 -->
+                <div class="property">
+                    <img src="image/h4.jpg" alt="Home 4">
+                    <h3>Elegant Apartment | Kalyani Nagar, Pune</h3>
+                    <p><strong>Price:</strong> 28 Lakhs</p>
+                    <p><strong>Bedrooms:</strong> 2 | <strong>Bathrooms:</strong> 2 | <strong>Size:</strong> 1,200 sqft</p>
+                    <!-- Link to property details page with query parameters -->
+                    <button class="feature-btn">
+                        <a href="property-details.html?image=image/h4.jpg&title=Elegant%20Apartment%20|%20Kalyani%20Nagar,%20Pune&price=28%20Lakhs&bedrooms=2&bathrooms=2&size=1200&description=Stylish%20apartment%20with%20modern%20design%20in%20Kalyani%20Nagar,%20Pune.">View Details</a>
+                    </button>
+                </div>
+    
+                <div class="property">
+                    <img src="image/h5.jpg" alt="Home 6">
+                    <h3>Keshav Apartment Homes | Dhanori, Pune</h3>
+                    <p><strong>Price:</strong> 18 Lakhs</p>
+                    <p><strong>Bedrooms:</strong> 4 | <strong>Bathrooms:</strong> 3 | <strong>Size:</strong> 2,800 sqft</p>
+                    <button class="feature-btn">View Details</button>
+                </div>
+                <div class="property">
+                    <img src="image/h6.jpg" alt="Home 7">
+                    <h3>Deluxe Homes | Katrj, Pune</h3>
+                    <p><strong>Price:</strong> 32 Lakhs</p>
+                    <p><strong>Bedrooms:</strong> 4 | <strong>Bathrooms:</strong> 3 | <strong>Size:</strong> 2,800 sqft</p>
+                    <button class="feature-btn">View Details</button>
+                </div>
+                <div class="property">
+                    <img src="image/h7.jpg" alt="Home 8">
+                    <h3>Sahara Home | Hadapsar, Pune</h3>
+                    <p><strong>Price:</strong> 27 Lakhs</p>
+                    <p><strong>Bedrooms:</strong> 4 | <strong>Bathrooms:</strong> 3 | <strong>Size:</strong> 2,800 sqft</p>
+                    <button class="feature-btn">View Details</button>
+                </div>
+                <div class="property">
+                    <img src="image/h8.jpg" alt="Home 9">
+                    <h3>Absolute Family Home | Yervada, Pune</h3>
+                    <p><strong>Price:</strong> 45 Lakhs</p>
+                    <p><strong>Bedrooms:</strong> 4 | <strong>Bathrooms:</strong> 3 | <strong>Size:</strong> 2,800 sqft</p>
+                    <button class="feature-btn">View Details</button>
+                </div>
+            </div>
+    
+            <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+    
+            <div class="view-more-btn-container" id="viewMoreBtn" style="display: none;">
+                <button class="view-more-btn"><a href="properties.html">View More Listings</a></button>
+            </div>
+        </div>
+    </section>   
+     <!-- WhatsApp Widget -->
+<a href="https://wa.me/1234567890" target="_blank" class="whatsapp_float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon" />
+</a>
+
+    <div class="cards-container">
+        <!-- buy -->
+        <div class="card">
+            <div class="card-image">
+                <img src="image/buy.jpeg" alt="Buy a Home">
+            </div>
+            <div class="card-content">
+                <h3>Buy a Home</h3>
+                <p>Explore the best homes for sale in your city. Find your perfect dream home today!</p>
+                <button class="btn"><a href="properties.html">Buy Homes</a></button>
+            </div>
+        </div>
+
+        <!-- sell -->
+        <div class="card">
+            <div class="card-image">
+                <img src="image/sale.webp" alt="Sell a Home">
+            </div>
+            <div class="card-content">
+                <h3>Sell a Home</h3>
+                <p>Looking to sell your home? Get the best offers from trusted buyers today.</p>
+                <button class="btn"><a href="sale.html">List Your Home</a></button>
+            </div>
+        </div>
+
+    <!-- rent -->
+        <div class="card">
+            <div class="card-image">
+                <img src="image/rent.jpg" alt="Rent a Home">
+            </div>
+            <div class="card-content">
+                <h3>Rent a Home</h3>
+                <p>Find your next rental property. Whether it's an apartment or house, we have options for you.</p>
+                <button class="btn"><a href="rent.html">Browse Rentals</a></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+<section class="about-us" id="about">
+    <div class="about-content">
+        <h2>About Dream-Homes</h2>
+        <p>At Dream-Homes, we are passionate about helping people find their perfect place to live. Whether you’re buying, selling, or renting, our team is dedicated to providing exceptional service and expertise to guide you through every step of the process.</p><br>
+        <p>With years of experience in the real estate industry, Dream-Homes has built a reputation for delivering high-quality homes, excellent customer support, and tailored solutions for all types of property needs. We pride ourselves on our extensive knowledge of the local market, ensuring that you find the best deals and investments.</p><br>
+        <p>Our mission is simple: to make the journey of finding or selling a home as seamless and stress-free as possible. Let Dream-Homes be your trusted partner in all things real estate.</p>
+    </div>
+    <div class="about-image">
+      <img src="image/happy family.jpg" alt="">
+    </div>
+</section>
+
+
+<section class="find-agent" id="find-agent">
+    <div class="agent-layout">
+        <!-- Left Side: Agent Content -->
+        <div class="agent-content">
+            <div class="find-agent-header">
+                <h2>Find Your Real Estate Agent</h2>
+                <p>We understand that finding the right real estate agent can make a big difference. Let us help you find a professional who can guide you every step of the way, whether you're buying, selling, or renting.</p>
+            </div>
+
+            <div class="find-agent-info">
+                <h3>Why You Need the Right Real Estate Agent</h3>
+                <p>Choosing the right real estate agent is crucial in ensuring a smooth experience when buying, selling, or renting a property. Here’s what you should look for:</p>
+
+                <ul>
+                    <li><strong>Expertise:</strong> Look for agents who specialize in the type of property you are interested in.</li>
+                    <li><strong>Local Knowledge:</strong> A local agent will have invaluable knowledge of the neighborhood you are considering.</li>
+                    <li><strong>Trust and Reputation:</strong> Trust is key in real estate transactions. A reliable agent with a good reputation will make your experience much easier and less stressful.</li>
+                    <li><strong>Communication Skills:</strong> Clear, responsive communication is crucial.</li>
+                </ul>
+
+                <p>We have a network of trusted agents who fit these criteria and are ready to help you find your perfect property.</p>
+                
+                <div class="find-agent-contact">
+                    <button class="contact-agent-btn" onclick="showAgentCards()">Contact an Agent</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for Agent Cards -->
+<!-- Modal for Agent Cards -->
+<div id="agentCards" style="display:none;">
+    <div class="agent-cards-container">
+        <!-- Close button with an icon -->
+        <div class="close-btn" onclick="closeAgentCards()">
+            <i class="fa fa-times"></i> 
+        </div>
+
+        <div class="agent-card">
+            <img src="agents/agent1.avif" alt="Agent 1">
+            <h4>Dipesh Patel</h4>
+            <p>Contact Number: +91 9937423108 </p>
+            <p>Email:dipeshpatel123@gmail.com</p>
+            <p>Specialized in Residential Properties</p>
+            <p class="experience">10 years experience</p>
+            <button class="agent-btn"><a href="contactUs.html">Contact Us</a></button>
+        </div>
+        <div class="agent-card">
+            <img src="agents/agent2.webp" alt="Agent 2">
+            <h4>Harshal Jha</h4>
+            <p>Contact Number: +91 9937423234 </p>
+            <p>Email:harshalJha113@gmail.com</p>
+            <p>Property Selling Specialist</p>
+            <p class="experience">6 years experience</p>
+            <button class="agent-btn"><a href="contactUs.html">Contact Us</a></button>
+
+        </div>
+        <div class="agent-card">
+            <img src="agents/agent3.jpg" alt="Agent 3">
+            <h4>Dipak Walaskar</h4>
+            <p>Contact Number: +91 9937423008 </p>
+            <p>Email:dipakWalskar1247@gmail.com</p>
+            <p>Homes Real Estate Specialist</p>
+            <p class="experience">8 years experience</p>
+            <button class="agent-btn"><a href="contactUs.html">Contact Us</a></button>
+
+        </div>
+        <div class="agent-card">
+            <img src="agents/agent4.jpg" alt="Agent 4">
+            <h4>Avinash Kumar</h4>
+            <p>Contact Number: +91 9937584108 </p>
+            <p>Email:avikumar40792@gmail.com</p>
+            <p>Luxury Real Estate Specialist</p>
+            <p class="experience">5 years experience</p>
+            <button class="agent-btn"><a href="contactUs.html">Contact Us</a></button>
+
+        </div>
+        <div class="agent-card">
+            <img src="agents/agent001.webp" alt="Agent 5">
+            <h4>Bhumika Chaudhary</h4>
+            <p>Contact Number: +91 99373323108 </p>
+            <p>Email:bhumidreamhomes112@gmail.com</p>
+            <p>Luxury Real Estate Specialist</p>
+            <p class="experience">6 years experience</p>
+            <button class="agent-btn"><a href="contactUs.html">Contact Us</a></button>
+
+        </div>
+    </div>
+</div>
+
+        <!-- Right Side: Features & Privacy Policies -->
+        <div class="policy-content">
+            <div class="features">
+                <h3>Our Features</h3>
+                <ul>
+                    <li>Expert Agents with Specialized Knowledge</li>
+                    <li>Exclusive Listings and Deals</li>
+                    <li>24/7 Customer Support</li>
+                    <li>Guidance for Buying, Selling, and Renting</li>
+                    <li>In-Depth Market Analysis</li>
+                </ul>
+            </div>
+
+            <div class="privacy-policy" id="privacy">
+                <h3>Privacy Policy</h3>
+                <p>Your privacy is important to us. At Dream-Homes, we are committed to protecting your personal information. Here’s how we handle it:</p>
+                <ul>
+                    <li>We do not sell your personal data.</li><br>
+                    <li>We only share your data with trusted partners necessary for completing transactions.</li> <br>
+                    <li>Your information is encrypted and stored securely.</li> <br>
+                    <li>We respect your privacy rights and give you control over your information.</li> <br>
+                </ul>
+                <a href="javascript:void(0)" onclick="togglePrivacyPolicy()">Read Full Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for Privacy Policy -->
+<div id="privacyPolicyModal" class="privacy-policy-modal" style="display:none;">
+    <div class="privacy-policy-card">
+        <h3>Full Privacy Policy</h3>
+        <p><strong>Your Privacy Matters</strong><br>At Dream-Homes, we value the privacy of our users. This Privacy Policy explains how we collect, use, and safeguard your personal information...</p>
+        <p><strong>1. Information We Collect</strong><br>We collect personal data such as your name, email address, phone number, and property preferences to offer tailored services...</p>
+        <p><strong>2. How We Use Your Information</strong><br>Your information is used solely for the purpose of providing real estate services, including connecting you with agents, processing transactions, and improving our services...</p>
+        <p><strong>3. Sharing Your Information</strong><br>We do not sell your personal data. We only share it with trusted partners necessary to complete transactions...</p>
+        <p><strong>4. Data Security</strong><br>We take the protection of your personal information seriously. Our website uses industry-standard encryption to ensure your data is stored securely...</p>
+        <p><strong>5. Your Rights</strong><br>You have the right to access, modify, or delete your personal information. Please contact us if you wish to exercise any of your rights...</p>
+        
+        <button onclick="closePrivacyPolicy()">Close</button>
+    </div>
+</div>
+
+<script>
+    function togglePrivacyPolicy() {
+        var policyModal = document.getElementById('privacyPolicyModal');
+        if (policyModal.style.display === 'none') {
+            policyModal.style.display = 'block';
+        } else {
+            policyModal.style.display = 'none';
+        }
+    }
+
+    //  close the privacy policy 
+    function closePrivacyPolicy() {
+        document.getElementById('privacyPolicyModal').style.display = 'none';
+    }
+
+    // // Function to show agent cards when clicking the "Contact an Agent" button
+    // function showAgentCards() {
+    //     document.getElementById('agentCards').style.display = 'flex';
+    // }
+    // Function to show the agent cards modal
+function showAgentCards() {
+    document.getElementById('agentCards').style.display = 'block';
+}
+// Function to close the agent cards modal
+function closeAgentCards() {
+    document.getElementById('agentCards').style.display = 'none';
+}
+
+
+</script>
+
+
+
+
+<footer>
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+            <h3>About Dream-Homes</h3>
+            <p>At Dream-Homes, we help people find their perfect place to live. With years of experience, we pride ourselves on delivering quality homes and exceptional service.</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="properties.html">Buy a Home</a></li>
+                <li><a href="sale.html">Sell a Home</a></li>
+                <li><a href="rent.html">Rent a Home</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href="#privacy">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: contact@dream-homes.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 Dream Street, Pune, Maharashtra</p>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Dream-Homes. All Rights Reserved.| Powered By: <a href="https://www.cybromatechtechnology.in/">Cybromatech Technology Pvt Ltd, Pune</a></p>
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

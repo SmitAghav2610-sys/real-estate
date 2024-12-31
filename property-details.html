@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        *{
+            font-family: Montserrat;
+        }
+        body {
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .property-detail-card {
+            background-color: transparent;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%; 
+            max-width: 500px;
+            color:black;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0,0.9);
+            position: relative;
+        }
+        .property-detail{
+            margin-left: 1rem;
+        }
+        .property-detail h3{
+            margin-top: 0.7rem;
+            text-align: center;
+        }
+        .property-detail-card img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        button.back-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.back-btn:hover {
+            background-color: #45a049;
+        }
+
+        button.contact-us-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.contact-us-btn:hover {
+            background-color: #45a049;
+        }
+        .contact-us-btn a {
+            list-style-type: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="property-detail-card" id="propertyDetails">
+    
+    <button class="back-btn" onclick="goBackToMainPage()">&#8592; Back to Main Page</button>
+
+    <div class="property-detail">
+        <img src="image/hall-img-1.webp" id="detailImage" alt="Property Image">
+        <h3 id="detailTitle"></h3>
+        <p><strong>Price:</strong> <span id="detailPrice"></span></p>
+        <p><strong>Bedrooms:</strong> <span id="detailBedrooms"></span> | <strong>Bathrooms:</strong> <span id="detailBathrooms"></span> | <strong>Size:</strong> <span id="detailSize"></span></p>
+        <p><strong>Description:</strong> <span id="detailDescription"></span></p>
+
+        <h4>Agent Contact:</h4>
+        <p><strong>Name:</strong> Dipesh Patel</p>
+        <p><strong>Phone:</strong> +91 9937423108</p>
+        <p><strong>Email:</strong> dipeshpatel123@gmail.com</p>
+
+        <button class="contact-us-btn" onclick="contactUs()"><a href="contactUs.html">Contact Us</a></button>
+    </div>
+</div>
+
+<script>
+    function getQueryParams() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return {
+            image: urlParams.get('image'),
+            title: urlParams.get('title'),
+            price: urlParams.get('price'),
+            bedrooms: urlParams.get('bedrooms'),
+            bathrooms: urlParams.get('bathrooms'),
+            size: urlParams.get('size'),
+            description: urlParams.get('description')
+        };
+    }
+
+    function displayPropertyDetails() {
+        const property = getQueryParams();
+
+        document.getElementById('detailImage').src = property.image;
+        document.getElementById('detailTitle').innerText = property.title;
+        document.getElementById('detailPrice').innerText = property.price;
+        document.getElementById('detailBedrooms').innerText = property.bedrooms;
+        document.getElementById('detailBathrooms').innerText = property.bathrooms;
+        document.getElementById('detailSize').innerText = property.size;
+        document.getElementById('detailDescription').innerText = property.description;
+    }
+
+    function goBackToMainPage() {
+        window.location.href = 'index.html'; 
+    }
+
+    window.onload = displayPropertyDetails;
+</script>
+
+</body>
+</html>

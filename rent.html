@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Properties</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Montserrat;
+        }
+        .logo{
+    filter: drop-shadow(5px 5px 5px orange);
+}
+        /* navbar */
+.navbar {
+    background-color:black;
+    padding: 10px 30px;
+    font-size: 16px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.navbar ul li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #3498db; 
+}
+
+.navbar li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:black;
+    padding: 10px 0;
+    width: 200px;
+    list-style-type: none;
+}
+
+.navbar li:hover > ul {
+    display: block;
+}
+
+.navbar li ul li a {
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.navbar li ul li a:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.buy-sublinks, .sell-sublinks, .rent-sublinks {
+    background-color: #34495e;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul li {
+        margin-bottom: 10px;
+    }
+
+    .navbar li ul {
+        position: static;
+        width: 100%;
+    }
+}
+
+        /* Start Section */
+        .start {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f5f5f5;
+        }
+
+        .start h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .start p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .start .search {
+            margin-top: 20px;
+        }
+
+        .start .search input {
+            padding: 10px;
+            width: 300px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .start .search button {
+            padding: 10px;
+            font-size: 1.2rem;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .start .search button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Rent Section */
+        .rent-properties {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .rent-properties h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .rent-properties p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        /* Rent Filters */
+        .rent-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+
+        .filter {
+            width: 30%;
+            margin-bottom: 20px;
+        }
+
+        .filter h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .filter select,
+        .filter input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+       /* Property Cards */
+.property-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.property-card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    height:450px; 
+    position: relative;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+}
+
+.property-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.property-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.property-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0;
+    margin-bottom:10px;
+    /* flex-grow: 1;  */
+}
+
+/* Position the button at the bottom */
+.feature-btn {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .rent-filters {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .filter {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .property-card {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .start h1 {
+                font-size: 2rem;
+            }
+
+            .start p {
+                font-size: 1rem;
+            }
+
+            .start .search input {
+                width: 80%;
+            }
+        }
+        /* Footer Styling */
+footer {
+    background-color: #333;
+    color: #f9f9f9;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+.footer-about h3{
+    margin-left:15px;
+}
+.footer-about p{
+    margin-right: 10px;
+}
+.footer-links a{
+    margin-left: 20px;
+}
+
+.footer-about, .footer-links, .footer-contact, .footer-social {
+    flex: 1;
+    min-width: 250px;
+    margin-right: 20px;
+}
+
+.footer-about h3, .footer-links h3, .footer-contact h3, .footer-social h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-about p, .footer-contact p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ff9f00;
+}
+
+.footer-social {
+    gap: 15px;
+    align-items: center;
+}
+
+.social-icons a {
+    font-size: 20px;
+    padding: 0.2rem;
+    color: #f9f9f9;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff9f00;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+.footer-bottom a{
+color: blue;
+list-style-type: none;
+text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-about, .footer-links, .footer-contact, .footer-social {
+        margin-bottom: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li class="logo"><a href="index.html">Dream-Homes</a></li>
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="properties.html">Buy</a></li>
+
+            <li><a href="sale.html">Sell</a></li>
+
+            <li><a href="rent.html">Rent</a></li>
+
+            <li><a href="contactUs.html">Contact Us</a></li>
+
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+
+        </ul>
+    </div>
+    <!-- Start Section -->
+    <div class="start">
+        <h1>Find Your Dream Home with Dream-Homes</h1>
+        <p>Explore the best rental properties available in your city.</p>
+    </div>
+
+    <!-- Rent Section -->
+    <section class="rent-properties" id="rent">
+        <h1>Rental Properties</h1>
+        <p>Explore a variety of rental options tailored to suit your lifestyle. Whether you're looking for an apartment, house, or commercial space, we have the best rental listings for you.</p>
+
+        <!-- Rent Filters (Sub-sections for Rent) -->
+        <div class="rent-filters">
+            <div class="filter">
+                <h3>Price Range</h3>
+                <select id="priceRange" onchange="searchProperties()">
+                    <option value="all">All Prices</option>
+                    <option value="below-15000">Below ₹15,000</option>
+                    <option value="15000-30000">₹15,000 - ₹30,000</option>
+                    <option value="30000-50000">₹30,000 - ₹50,000</option>
+                    <option value="above-50000">Above ₹50,000</option>
+                </select>
+            </div>
+            <div class="filter">
+                <h3>Property Type</h3>
+                <select id="propertyType" onchange="searchProperties()">
+                    <option value="all">All Types</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="house">House</option>
+                    <option value="commercial">Commercial</option>
+                    <option value="villa">Villa</option>
+                </select>
+            </div>
+            <div class="filter">
+                <h3>Location</h3>
+                <input type="text" id="locationFilter" placeholder="Enter city or locality" onkeyup="searchProperties()">
+            </div>
+        </div>
+
+        <!-- Rental Property Cards -->
+        <div class="property-cards-container" id="propertyContainer">
+            <!-- Property Cards will be injected here via JavaScript -->
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h3>About Dream-Homes</h3>
+                <p>At Dream-Homes, we help people find their perfect place to live. With years of experience, we pride ourselves on delivering quality homes and exceptional service.</p>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="properties.html">Buy a Home</a></li>
+                    <li><a href="sale.html">Sell a Home</a></li>
+                    <li><a href="rent.html">Rent a Home</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                    <li><a href="index.html#privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Section -->
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: contact@dream-homes.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: 123 Dream Street, Pune, Maharashtra</p>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Dream-Homes. All Rights Reserved.| Powered By: <a href="https://www.cybromatechtechnology.in/">Cybromatech Technology Pvt Ltd, Pune</a></p>
+        </div>
+    </footer>
+    <script>
+        // Sample Property Data (100+ Properties)
+        const properties = [
+            { name: 'Modern Apartment | Hadapasar, Pune', price: 20000, type: 'Apartment', location: 'Hadapasar, Pune', image: 'image/hall-img-1.webp', bedrooms: 2, bathrooms: 2, size: '1,200 sqft' },
+            { name: 'Cozy Flat | Wagholi, Pune', price: 15000, type: 'Apartment', location: 'Wagholi, Pune', image: 'image/hall-img-2.webp', bedrooms: 1, bathrooms: 1, size: '750 sqft' },
+            { name: 'Spacious House | Koregaon Park, Pune', price: 45000, type: 'House', location: 'Koregaon Park, Pune', image: 'image/hall-img-3.webp', bedrooms: 3, bathrooms: 3, size: '2,200 sqft' },
+            { name: 'Luxury Villa | Kalyani nagar, Pune', price: 75000, type: 'Villa', location: 'Kalyani Nagar, Pune', image: 'image/hall-img-4.webp', bedrooms: 4, bathrooms: 4, size: '3,500 sqft' },
+            { name: 'Commercial Office | Shivaji Nagar, Pune', price: 55000, type: 'Commercial', location: 'Shivaji Nagar, Pune', image: 'image/hall-img-5.webp', bedrooms: 0, bathrooms: 1, size: '1,800 sqft' },
+            { name: 'Premium Apartment | South Pune', price: 30000, type: 'Apartment', location: 'South Pune', image: 'image/hall-img-6.webp', bedrooms: 2, bathrooms: 2, size: '1,500 sqft' },
+            { name: 'Studio Apartment | West Pune', price: 12000, type: 'Apartment', location: 'West Pune', image: 'image/hall-img-1.webp', bedrooms: 1, bathrooms: 1, size: '500 sqft' },
+            { name: 'Luxury House | Swargate, Pune', price: 65000, type: 'House', location: 'Swargate, Pune', image: 'image/hall-img-2.webp', bedrooms: 3, bathrooms: 3, size: '2,500 sqft' },
+            { name: 'Corporate Office | East Pune', price: 70000, type: 'Commercial', location: 'East Pune', image: 'image/hall-img-4.webp', bedrooms: 0, bathrooms: 2, size: '2,000 sqft' },
+            { name: 'Elegant Villa | West Pune', price: 80000, type: 'Villa', location: 'West Pune', image: 'image/hall-img-3.webp', bedrooms: 4, bathrooms: 4, size: '3,200 sqft' },
+            { name: 'Cozy Cottage | Pune Station', price: 18000, type: 'House', location: 'Pune Station', image: 'image/hall-img-2.webp', bedrooms: 2, bathrooms: 2, size: '1,000 sqft' },
+            { name: 'Penthouse | Viman-nagar', price: 90000, type: 'Apartment', location: 'Vimannagar', image: 'image/hall-img-1.webp', bedrooms: 4, bathrooms: 4, size: '3,000 sqft' },
+
+        ];
+
+       // Function to display properties based on filters and search query
+function displayProperties(filteredProperties) {
+    const container = document.getElementById('propertyContainer');
+    container.innerHTML = '';  // Clear current properties
+
+    filteredProperties.forEach(property => {
+        const card = document.createElement('div');
+        card.classList.add('property-card');
+        
+        card.innerHTML = `
+            <img src="${property.image}" alt="${property.name}">
+            <h3>${property.name}</h3>
+            <p><strong>Price:</strong> ₹${property.price}/month</p>
+            <p><strong>Bedrooms:</strong> ${property.bedrooms} | <strong>Bathrooms:</strong> ${property.bathrooms} | <strong>Size:</strong> ${property.size}</p>
+            <button class="feature-btn">View Details</button>
+        `;
+
+        container.appendChild(card);
+    });
+}
+
+// Function to filter properties based on search input and selected filters
+function searchProperties() {
+    const priceRange = document.getElementById('priceRange').value;
+    const propertyType = document.getElementById('propertyType').value;
+    const locationFilter = document.getElementById('locationFilter').value.toLowerCase();
+
+    const filteredProperties = properties.filter(property => {
+        const matchesPrice = (priceRange === 'all') ||
+            (priceRange === 'below-15000' && property.price < 15000) ||
+            (priceRange === '15000-30000' && property.price >= 15000 && property.price <= 30000) ||
+            (priceRange === '30000-50000' && property.price >= 30000 && property.price <= 50000) ||
+            (priceRange === 'above-50000' && property.price > 50000);
+
+        const matchesType = (propertyType === 'all') || (property.type.toLowerCase() === propertyType.toLowerCase());
+        const matchesLocation = locationFilter === '' || property.location.toLowerCase().includes(locationFilter);
+
+        return matchesPrice && matchesType && matchesLocation;
+    });
+
+    displayProperties(filteredProperties);
+}
+
+// Display all properties initially
+displayProperties(properties);
+    </script>
+</body>
+</html>
