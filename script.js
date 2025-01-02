@@ -59,10 +59,10 @@ window.onload = displayPropertyDetails;
 
 
 
-if (!localStorage.getItem('email') || !localStorage.getItem('password')) {
-    alert("You are not signed in. Please sign in to continue.");
-    window.location.href = "signin.html";  // Redirect to sign-in page if not signed in
-}
+// if (!localStorage.getItem('email') || !localStorage.getItem('password')) {
+//     alert("You are not signed in. Please sign in to continue.");
+//     window.location.href = "signin.html";  // Redirect to sign-in page if not signed in
+// }
 
 function showAgentCards() {
     var agentCards = document.getElementById('agentCards');
